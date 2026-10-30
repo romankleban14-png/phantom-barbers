@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Oswald:wght@500;700&family=Rye&display=swap');
+
 :root {
     --c-white: #ffffff; 
     --c-offwhite: #fdfdfd; 
@@ -7,9 +9,9 @@
     --c-gray-light: #eeeeee;
     --c-gray: #888888; 
     --c-gray-dark: #333333;
-    --font-main: 'Montserrat', sans-serif; 
-    --font-heading: 'Oswald', sans-serif; 
-    --font-logo: 'Rye', cursive;
+    --font-main: 'Montserrat', Arial, sans-serif; 
+    --font-heading: 'Oswald', Arial, sans-serif; 
+    --font-logo: 'Rye', Georgia, serif;
     --transition: 0.3s ease;
 }
 
@@ -27,6 +29,9 @@ body {
     width: 100%; 
     max-width: 100vw;
 }
+
+h1, h2, h3, p, a, span, li, button { font-family: inherit; }
+.logo-text { font-family: var(--font-logo); }
 
 #preloader { 
     position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
@@ -148,6 +153,8 @@ section { position: relative; padding: 180px 5vw 100px 5vw; min-height: 80vh; ma
 .slide-left.active, .slide-right.active { opacity: 1; transform: translateX(0); }
 
 .grid-2x2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 50px; width: 100%; }
+/* Якщо барберів непарна кількість — останній по центру */
+.grid-2x2 .barber-box:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc(50% - 25px); }
 .barber-box { text-align: center; }
 .b-img { width: 100%; height: 450px; object-fit: cover; transition: 0.5s; border-radius: 10px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.2); display: block;}
 .barber-box:hover .b-img { transform: scale(1.02); }
@@ -271,8 +278,8 @@ body.forced-dark-theme .page-btn.active, body.forced-dark-theme .page-btn:hover 
     header { padding: 15px 5vw; flex-direction: row; justify-content: space-between; }
     .header-logo { height: 50px; width: 50px; }
     
-    .logo-text, .hero h1 { font-family: 'Rye', cursive !important; }
-    .section-title, .price-col-title, .col-price, .page-btn, .prod-price-compact { font-family: 'Oswald', sans-serif !important; }
+    .logo-text, .hero h1 { font-family: 'Rye', Georgia, serif !important; }
+    .section-title, .price-col-title, .col-price, .page-btn, .prod-price-compact { font-family: 'Oswald', Arial, sans-serif !important; }
     .logo-text { font-size: 20px; } 
     
     .header-book-btn, .settings-container { display: none; } 
@@ -310,6 +317,7 @@ body.forced-dark-theme .page-btn.active, body.forced-dark-theme .page-btn:hover 
     .price-row { font-size: 13px; padding: 10px 0; width: 100%; }
 
     .grid-2x2 { grid-template-columns: repeat(2, 1fr); gap: 15px; width: 100%; justify-content: center; }
+    .grid-2x2 .barber-box:last-child:nth-child(odd) { width: calc(50% - 7.5px); }
     .b-img { width: 100%; height: auto !important; aspect-ratio: 1 / 1 !important; object-fit: cover !important; border-radius: 10px; margin-bottom: 8px; }
     .barber-box h3 { font-size: 15px; }
     .b-rank { font-size: 10px; margin-bottom: 8px; }
@@ -342,19 +350,16 @@ body.forced-dark-theme .page-btn.active, body.forced-dark-theme .page-btn:hover 
     .c-map { width: 100%; }
     .c-map iframe { height: 350px; min-height: auto; }
     
-    /* =========================================
-       FIXED MOBILE FOOTER (PERFECT CENTER & NO OVERLAP)
-       ========================================= */
+    /* FIXED MOBILE FOOTER */
     .footer-container { 
         display: flex !important; 
         flex-direction: column !important; 
         align-items: center !important; 
-        gap: 25px !important; /* Fixed spacing between levels */
+        gap: 25px !important;
         padding: 30px 20px !important;
     }
     .footer-text-nav { display: none !important; }
     
-    /* Level 1: Social icons perfectly centered on mobile */
     .footer-left { 
         position: static !important; 
         width: 100% !important; 
@@ -362,10 +367,9 @@ body.forced-dark-theme .page-btn.active, body.forced-dark-theme .page-btn:hover 
         justify-content: center !important; 
         order: 1 !important;
     }
-    .footer-socials { gap: 25px !important; } /* Comfortable gap between icons */
+    .footer-socials { gap: 25px !important; }
     .footer-socials a { font-size: 26px !important; }
     
-    /* Level 2: To top button in the center below icons */
     .footer-right { 
         position: static !important;
         width: 100% !important; 
@@ -375,7 +379,6 @@ body.forced-dark-theme .page-btn.active, body.forced-dark-theme .page-btn:hover 
         z-index: 2 !important; 
     }
     
-    /* Level 3: Copyright text at the very bottom */
     .footer-center { 
         position: static !important;
         width: 100% !important; 
