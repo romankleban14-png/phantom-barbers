@@ -1,32 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Oswald:wght@500;700&family=Rye&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Phantom Barbers | Dolyna</title>
-    <meta name="description" content="Phantom Barbers — premium barbershop in Dolyna. Professional men's haircuts, beard trims, and high-quality grooming products.">
-    
+
+    <!-- The intro is shown once per session -->
+    <script>try{if(sessionStorage.getItem('pb_intro')){document.documentElement.classList.add('skip-intro');}}catch(e){}</script>
+
+    <title>Phantom Barbers | Men's Haircuts & Barbershop in Dolyna</title>
+    <meta name="description" content="Phantom Barbers — barbershop in Dolyna: men's haircuts, beard trims, royal shave and grooming products. Book online.">
+
+    <meta name="google-site-verification" content="fKdQhDKn_RcBx-gY5dBWDIaARa6plZfwYg9gv59tmJs" />
+
+    <link rel="canonical" href="https://phantom-barbers.netlify.app/en.html">
+    <link rel="alternate" hreflang="uk" href="https://phantom-barbers.netlify.app/">
+    <link rel="alternate" hreflang="en" href="https://phantom-barbers.netlify.app/en.html">
+    <link rel="alternate" hreflang="x-default" href="https://phantom-barbers.netlify.app/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Phantom Barbers">
+    <meta property="og:title" content="Phantom Barbers | Barbershop in Dolyna">
+    <meta property="og:description" content="Men's haircuts, beard trims and royal shave in Dolyna. Book online.">
+    <meta property="og:image" content="https://phantom-barbers.netlify.app/images/og-cover.jpg">
+    <meta property="og:url" content="https://phantom-barbers.netlify.app/en.html">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#000000">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HairSalon",
+      "name": "Phantom Barbers",
+      "description": "Barbershop in Dolyna: men's haircuts, beard trims, royal shave.",
+      "url": "https://phantom-barbers.netlify.app/",
+      "image": "https://phantom-barbers.netlify.app/images/logo.jpg",
+      "telephone": "+380683929066",
+      "email": "phantombarbers.1@gmail.com",
+      "priceRange": "₴₴",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "8 Nezalezhnosti Ave",
+        "addressLocality": "Dolyna",
+        "addressRegion": "Ivano-Frankivsk Oblast",
+        "postalCode": "77500",
+        "addressCountry": "UA"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 48.9728387, "longitude": 23.9652203 },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "09:00",
+        "closes": "20:00"
+      }],
+      "sameAs": [
+        "https://instagram.com/phantom_barbers",
+        "https://tiktok.com/@phantom.barbers"
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Oswald:wght@500;700&family=Rye&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="images/logo.jpg">
+
+    <!-- Favicon (these files must be added to the site root) -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/jpg" sizes="192x192" href="/favicon-192.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
     <link rel="stylesheet" href="style.css">
-    
-    <link href="https://fonts.googleapis.com/css2 family=Montserrat:wght@300;400;600;800&family=Oswald:wght@500;700&family=Rye&display=swap" rel="stylesheet">
 </head>
 <body id="top">
-
-    <div id="preloader"><img src="images/logo.jpg" alt="Loading" class="preloader-logo"></div>
+    <div id="preloader">
+        <div class="pre-curtain pre-left"></div>
+        <div class="pre-curtain pre-right"></div>
+        <div class="pre-center">
+            <div class="pre-logo-wrap">
+                <img src="images/logo.jpg" alt="Phantom Barbers" class="preloader-logo">
+            </div>
+            <p class="pre-text">Phantom Barbers</p>
+            <div class="pre-line"></div>
+        </div>
+    </div>
 
     <header>
         <a href="#top" class="logo-block">
             <img src="images/logo.jpg" alt="Phantom Barbers Logo" class="header-logo">
             <span class="logo-text">Phantom Barbers</span>
         </a>
-        
+
         <button class="hamburger" aria-label="Open navigation menu"><i class="fas fa-bars"></i></button>
 
         <nav class="nav-menu">
@@ -36,24 +100,24 @@
                 <li><a href="#lookbook">Look-Book</a></li>
                 <li><a href="#cosmetics">Cosmetics</a></li>
                 <li><a href="#contacts">Contacts</a></li>
-                
+
                 <li class="mobile-book-li">
                     <a href="https://w.wlaunch.net/i/999b5880-0034-11f1-920a-491fb198e776/b/999d2d5e-0034-11f1-920a-491fb198e776/r" target="_blank" class="mobile-book-btn" style="color: #ffffff !important; background-color: #000000 !important; border: 2px solid #ffffff !important; opacity: 1 !important; font-weight: 900 !important; letter-spacing: 1px !important;">BOOK ONLINE</a>
                 </li>
-                
+
                 <li class="mobile-settings">
                     <div class="theme-switcher-block">
                         <button onclick="toggleTheme('light')" class="theme-toggle-btn btn-light-theme active" aria-label="Light theme"><i class="fas fa-sun"></i></button>
                         <button onclick="toggleTheme('dark')" class="theme-toggle-btn btn-dark-theme" aria-label="Dark theme"><i class="fas fa-moon"></i></button>
                     </div>
                     <div class="lang-switcher">
-                        <a href="index.html" class="lang">УКР</a>
-                        <a href="en.html" class="lang active">ENG</a>
+                        <a href="index.html" class="lang" hreflang="uk">УКР</a>
+                        <a href="en.html" class="lang active" hreflang="en">ENG</a>
                     </div>
                 </li>
             </ul>
         </nav>
-        
+
         <div class="header-actions">
             <a href="https://w.wlaunch.net/i/999b5880-0034-11f1-920a-491fb198e776/b/999d2d5e-0034-11f1-920a-491fb198e776/r" target="_blank" class="header-book-btn">BOOK</a>
             <div class="settings-container">
@@ -66,8 +130,8 @@
                     </div>
                     <p class="dropdown-title">Language</p>
                     <div class="lang-switcher">
-                        <a href="index.html" class="lang">УКР</a>
-                        <a href="en.html" class="lang active">ENG</a>
+                        <a href="index.html" class="lang" hreflang="uk">УКР</a>
+                        <a href="en.html" class="lang active" hreflang="en">ENG</a>
                     </div>
                 </div>
             </div>
@@ -79,13 +143,18 @@
             <h1>PHANTOM BARBERS</h1>
             <p class="subtitle">EST. 25 | LET'S MAKE THE DIFFERENCE</p>
             <p class="about-text">Where men trust their hair to true professionals.</p>
+
+            <p class="about-description" style="max-width: 600px; margin: 20px auto; color: #ccc;">
+                Looking for a quality barbershop in Dolyna? At Phantom Barbers we do more than men's haircuts, we create style. Whether you need a professional beard trim, sharp contour work, or advice on men's grooming products, our barbers are waiting for you in the center of Dolyna.
+            </p>
+
             <a href="https://w.wlaunch.net/i/999b5880-0034-11f1-920a-491fb198e776/b/999d2d5e-0034-11f1-920a-491fb198e776/r" target="_blank" class="btn-book pulse-btn hero-btn">BOOK ONLINE</a>
         </div>
     </section>
 
     <section id="services" class="full-width-section light-section" style="padding-bottom: 100px;">
-        <h2 class="section-title title-center scroll-reveal">PRICE LIST</h2>
-        
+        <h2 class="section-title title-center scroll-reveal">PRICE LIST FOR HAIRCUTS & SERVICES IN DOLYNA</h2>
+
         <div class="mobile-price-toggle scroll-reveal">
             <button class="price-btn active" id="btn-junior" onclick="togglePrice('junior')">JUNIOR BARBER</button>
             <button class="price-btn" id="btn-senior" onclick="togglePrice('senior')">SENIOR BARBER</button>
@@ -94,32 +163,30 @@
         <div class="price-lists-wrapper">
             <div class="price-list-col slide-left" id="col-junior">
                 <h3 class="price-col-title">JUNIOR BARBER</h3>
-                <div class="price-row"><span class="col-service">1. Men's haircut</span><span class="col-price">250 UAH</span></div>
-                <div class="price-row"><span class="col-service">2. Machine haircut</span><span class="col-price">200 UAH</span></div>
-                <div class="price-row"><span class="col-service">3. Kids haircut (under 10)</span><span class="col-price">250 UAH</span></div>
-                <div class="price-row"><span class="col-service">4. Buzz cut (one guard)</span><span class="col-price">200 UAH</span></div>
-                <div class="price-row"><span class="col-service">5. Beard trim</span><span class="col-price">250 UAH</span></div>
-                <div class="price-row"><span class="col-service">6. Long haircut</span><span class="col-price">350 UAH</span></div>
-                <div class="price-row"><span class="col-service">7. Haircut + beard</span><span class="col-price">500 UAH</span></div>
-                <div class="price-row"><span class="col-service">8. Machine haircut + beard</span><span class="col-price">450 UAH</span></div>
-                <div class="price-row"><span class="col-service">9. Grey hair blending</span><span class="col-price">300 UAH</span></div>
-                <div class="price-row"><span class="col-service">10. Hair styling</span><span class="col-price">150 UAH</span></div>
-                <div class="price-row"><span class="col-service">11. Waxing</span><span class="col-price">100 UAH</span></div>
+                <div class="price-row"><span class="col-service">1. Men's haircut</span><span class="col-price">350 UAH</span></div>
+                <div class="price-row"><span class="col-service">2. Clipper haircut</span><span class="col-price">300 UAH</span></div>
+                <div class="price-row"><span class="col-service">3. Kids haircut (under 10)</span><span class="col-price">300 UAH</span></div>
+                <div class="price-row"><span class="col-service">4. Beard trim</span><span class="col-price">300 UAH</span></div>
+                <div class="price-row"><span class="col-service">5. Royal shave</span><span class="col-price">300 UAH</span></div>
+                <div class="price-row"><span class="col-service">6. Shaver shave</span><span class="col-price">200 UAH</span></div>
+                <div class="price-row"><span class="col-service">7. Haircut + beard</span><span class="col-price">650 UAH</span></div>
+                <div class="price-row"><span class="col-service">8. Clipper haircut + beard</span><span class="col-price">600 UAH</span></div>
+                <div class="price-row"><span class="col-service">9. VIP client</span><span class="col-price">700 UAH</span></div>
+                <div class="price-row"><span class="col-service">10. Wax removal</span><span class="col-price">100 UAH</span></div>
             </div>
-            
+
             <div class="price-list-col slide-right hidden-mobile" id="col-senior">
                 <h3 class="price-col-title">SENIOR BARBER</h3>
                 <div class="price-row"><span class="col-service">1. Men's haircut</span><span class="col-price">400 UAH</span></div>
-                <div class="price-row"><span class="col-service">2. Machine haircut</span><span class="col-price">350 UAH</span></div>
+                <div class="price-row"><span class="col-service">2. Clipper haircut</span><span class="col-price">350 UAH</span></div>
                 <div class="price-row"><span class="col-service">3. Kids haircut (under 10)</span><span class="col-price">350 UAH</span></div>
-                <div class="price-row"><span class="col-service">4. Buzz cut (one guard)</span><span class="col-price">300 UAH</span></div>
-                <div class="price-row"><span class="col-service">5. Beard trim</span><span class="col-price">350 UAH</span></div>
-                <div class="price-row"><span class="col-service">6. Long haircut</span><span class="col-price">450 UAH</span></div>
+                <div class="price-row"><span class="col-service">4. Beard trim</span><span class="col-price">350 UAH</span></div>
+                <div class="price-row"><span class="col-service">5. Royal shave</span><span class="col-price">300 UAH</span></div>
+                <div class="price-row"><span class="col-service">6. Shaver shave</span><span class="col-price">200 UAH</span></div>
                 <div class="price-row"><span class="col-service">7. Haircut + beard</span><span class="col-price">700 UAH</span></div>
-                <div class="price-row"><span class="col-service">8. Machine haircut + beard</span><span class="col-price">650 UAH</span></div>
-                <div class="price-row"><span class="col-service">9. Grey hair blending</span><span class="col-price">300 UAH</span></div>
-                <div class="price-row"><span class="col-service">10. Hair styling</span><span class="col-price">150 UAH</span></div>
-                <div class="price-row"><span class="col-service">11. Waxing</span><span class="col-price">100 UAH</span></div>
+                <div class="price-row"><span class="col-service">8. Clipper haircut + beard</span><span class="col-price">650 UAH</span></div>
+                <div class="price-row"><span class="col-service">9. VIP client</span><span class="col-price">800 UAH</span></div>
+                <div class="price-row"><span class="col-service">10. Wax removal</span><span class="col-price">100 UAH</span></div>
             </div>
         </div>
     </section>
@@ -128,17 +195,17 @@
         <div class="split-title"><h2 class="section-title title-right">BARBERS</h2></div>
         <div class="split-content grid-2x2">
             <article class="barber-box scroll-reveal">
-                <a href="https://instagram.com/barber_dolyna" target="_blank"><img src="images/barber1.jpg" alt="Serhiy" class="b-img" loading="lazy"></a>
+                <a href="https://instagram.com/barber_dolyna" target="_blank"><img src="images/barber1.jpg" alt="Serhiy, senior barber at Phantom Barbers" class="b-img" loading="lazy"></a>
                 <h3>Serhiy</h3><span class="b-rank">Senior Barber</span>
                 <a href="https://instagram.com/barber_dolyna" class="b-inst" target="_blank"><i class="fab fa-instagram"></i> @barber_dolyna</a>
             </article>
             <article class="barber-box scroll-reveal">
-                <a href="https://instagram.com/pavlo_barber.ph" target="_blank"><img src="images/barber2.jpg" alt="Pavlo" class="b-img" loading="lazy"></a>
+                <a href="https://instagram.com/pavlo_barber.ph" target="_blank"><img src="images/barber2.jpg" alt="Pavlo, junior barber at Phantom Barbers" class="b-img" loading="lazy"></a>
                 <h3>Pavlo</h3><span class="b-rank">Junior Barber</span>
                 <a href="https://instagram.com/pavlo_barber.ph" class="b-inst" target="_blank"><i class="fab fa-instagram"></i> @pavlo_barber.ph</a>
             </article>
             <article class="barber-box scroll-reveal">
-                <a href="https://instagram.com/andriy_barber.ph" target="_blank"><img src="images/barber3.jpg" alt="Andriy" class="b-img" loading="lazy"></a>
+                <a href="https://instagram.com/andriy_barber.ph" target="_blank"><img src="images/barber3.jpg" alt="Andriy, junior barber at Phantom Barbers" class="b-img" loading="lazy"></a>
                 <h3>Andriy</h3><span class="b-rank">Junior Barber</span>
                 <a href="https://instagram.com/andriy_barber.ph" class="b-inst" target="_blank"><i class="fab fa-instagram"></i> @andriy_barber.ph</a>
             </article>
@@ -146,19 +213,19 @@
     </section>
 
     <section id="lookbook" class="full-width-section light-section">
-        <h2 class="section-title title-center scroll-reveal">LOOK-BOOK</h2>
+        <h2 class="section-title title-center scroll-reveal">LOOK-BOOK: OUR WORK</h2>
         <div class="lookbook-container scroll-reveal">
             <button class="look-btn l-prev" aria-label="Previous photo" onclick="moveLookbook(-1)">❮</button>
             <button class="look-btn l-next" aria-label="Next photo" onclick="moveLookbook(1)">❯</button>
             <div class="lookbook-track" id="lookbook-track">
-                <img src="images/work1.jpg" data-index="0" alt="Haircut 1" loading="lazy" onclick="openLightbox(this)">
-                <img src="images/work2.jpg" data-index="1" alt="Haircut 2" loading="lazy" onclick="openLightbox(this)">
-                <img src="images/work3.jpg" data-index="2" alt="Haircut 3" loading="lazy" onclick="openLightbox(this)">
-                <img src="images/work4.jpg" data-index="3" alt="Haircut 4" loading="lazy" onclick="openLightbox(this)">
-                <img src="images/work5.jpg" data-index="4" alt="Haircut 5" loading="lazy" onclick="openLightbox(this)">
-                <img src="images/work6.jpg" data-index="5" alt="Haircut 6" loading="lazy" onclick="openLightbox(this)">
-                <img src="images/work7.jpg" data-index="6" alt="Haircut 7" loading="lazy" onclick="openLightbox(this)">
-                <img src="images/work8.jpg" data-index="7" alt="Haircut 8" loading="lazy" onclick="openLightbox(this)">
+                <img src="images/work1.jpg" data-index="0" alt="Men's haircut by a Phantom Barbers barber in Dolyna, photo 1" loading="lazy" onclick="openLightbox(this)">
+                <img src="images/work2.jpg" data-index="1" alt="Men's haircut by a Phantom Barbers barber in Dolyna, photo 2" loading="lazy" onclick="openLightbox(this)">
+                <img src="images/work3.jpg" data-index="2" alt="Men's haircut by a Phantom Barbers barber in Dolyna, photo 3" loading="lazy" onclick="openLightbox(this)">
+                <img src="images/work4.jpg" data-index="3" alt="Men's haircut by a Phantom Barbers barber in Dolyna, photo 4" loading="lazy" onclick="openLightbox(this)">
+                <img src="images/work5.jpg" data-index="4" alt="Men's haircut by a Phantom Barbers barber in Dolyna, photo 5" loading="lazy" onclick="openLightbox(this)">
+                <img src="images/work6.jpg" data-index="5" alt="Men's haircut by a Phantom Barbers barber in Dolyna, photo 6" loading="lazy" onclick="openLightbox(this)">
+                <img src="images/work7.jpg" data-index="6" alt="Men's haircut by a Phantom Barbers barber in Dolyna, photo 7" loading="lazy" onclick="openLightbox(this)">
+                <img src="images/work8.jpg" data-index="7" alt="Men's haircut by a Phantom Barbers barber in Dolyna, photo 8" loading="lazy" onclick="openLightbox(this)">
             </div>
         </div>
         <div class="lookbook-dots scroll-reveal">
@@ -187,17 +254,26 @@
         <h2 class="section-title title-center scroll-reveal">CONTACTS</h2>
         <div class="contacts-wrapper scroll-reveal">
             <div class="c-info">
-                <p class="c-item"><i class="fas fa-map-marked-alt"></i> 8 Nezalezhnosti Ave, Dolyna</p>
+                <p class="c-item"><i class="fas fa-map-marked-alt"></i> Dolyna, 8 Nezalezhnosti Ave, 77500</p>
                 <p class="c-item"><i class="fas fa-clock"></i> Mon - Sat: 09:00 - 20:00</p>
-                <p class="c-item"><i class="fas fa-phone-alt"></i> <a href="tel:0683929066">068 39 29 066</a></p>
-                <p class="c-item"><i class="fas fa-envelope"></i> <a href="mailto:phantombarbers.1@gmail.com">phantombarbers.1@gmail.com</a></p>
+                <p class="c-item"><a href="tel:+380683929066"><i class="fas fa-phone-alt"></i> 068 39 29 066</a></p>
+                <p class="c-item"><a href="mailto:phantombarbers.1@gmail.com"><i class="fas fa-envelope"></i> phantombarbers.1@gmail.com</a></p>
                 <div class="c-socials">
                     <a href="https://instagram.com/phantom_barbers" target="_blank"><i class="fab fa-instagram"></i> @phantom_barbers</a>
                     <a href="https://tiktok.com/@phantom.barbers" target="_blank"><i class="fab fa-tiktok"></i> @phantom.barbers</a>
                 </div>
             </div>
+
             <div class="c-map">
-                <iframe src="https://maps.google.com/maps?q=Nezalezhnosti+Avenue,+8,+Dolyna,+Ivano-Frankivsk+Oblast&output=embed" width="100%" height="100%" style="border:0; min-height: 450px; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe title="Map: Phantom Barbers, 8 Nezalezhnosti Ave, Dolyna" src="https://maps.google.com/maps?q=Nezalezhnosti+Avenue,+8,+Dolyna,+Ivano-Frankivsk+Oblast&hl=en&output=embed" width="100%" height="450" style="border:0; width:100%; min-height: 450px; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <div class="review-block">
+                    <p class="review-text">Enjoyed your visit? Leave a review!</p>
+                    <!-- The direct review-form link is set in script.js (REVIEW_LINK / REVIEW_PLACE_ID) -->
+                    <a href="https://www.google.com/maps/place/Phantom+barbershop/@48.9730007,23.9652182,19.5z/data=!4m6!3m5!1s0x439b1cfe65fd6679:0x19ac7fc8b8e182ab!8m2!3d48.9728387!4d23.9652203!16s%2Fg%2F11zxngdlsh" target="_blank" rel="noopener" class="review-btn">
+                        <i class="fas fa-star"></i> LEAVE A REVIEW
+                    </a>
+                </div>
             </div>
         </div>
     </section>

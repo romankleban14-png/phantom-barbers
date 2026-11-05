@@ -3,29 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
+    <!-- Інтро показується лише раз за сесію -->
+    <script>try{if(sessionStorage.getItem('pb_intro')){document.documentElement.classList.add('skip-intro');}}catch(e){}</script>
+
     <title>Phantom Barbers | Чоловічі стрижки та послуги у м. Долина</title>
-    <meta name="description" content="Phantom Barbers — найкращий барбершоп у м. Долина. Професійні чоловічі стрижки, небезпечне гоління, догляд за бородою та топова чоловіча косметика. Записуйся онлайн!">
-    <meta name="keywords" content="барбершоп Долина, барбер Долина, чоловіча стрижка Долина, стрижка бороди Долина, чоловічий салон Долина, Phantom Barbers Долина, найкращий барбершоп Долина, небезпечне гоління Долина, чоловіча косметика для волосся, де підстригтися в Долині, стильна стрижка Долина, барбершоп ціни Долина, Barber Dolyna, men's haircut Dolyna">
-    
+    <meta name="description" content="Phantom Barbers — барбершоп у Долині: чоловічі стрижки, оформлення бороди, королівське гоління та чоловіча косметика. Запис онлайн.">
+
     <meta name="google-site-verification" content="fKdQhDKn_RcBx-gY5dBWDIaARa6plZfwYg9gv59tmJs" />
-    
+
+    <link rel="canonical" href="https://phantom-barbers.netlify.app/">
+    <link rel="alternate" hreflang="uk" href="https://phantom-barbers.netlify.app/">
+    <link rel="alternate" hreflang="en" href="https://phantom-barbers.netlify.app/en.html">
+    <link rel="alternate" hreflang="x-default" href="https://phantom-barbers.netlify.app/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Phantom Barbers">
+    <meta property="og:title" content="Phantom Barbers | Барбершоп у Долині">
+    <meta property="og:description" content="Чоловічі стрижки, оформлення бороди, королівське гоління. Запис онлайн.">
+    <meta property="og:image" content="https://phantom-barbers.netlify.app/images/og-cover.jpg">
+    <meta property="og:url" content="https://phantom-barbers.netlify.app/">
+    <meta property="og:locale" content="uk_UA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#000000">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HairSalon",
+      "name": "Phantom Barbers",
+      "description": "Барбершоп у Долині: чоловічі стрижки, оформлення бороди, королівське гоління.",
+      "url": "https://phantom-barbers.netlify.app/",
+      "image": "https://phantom-barbers.netlify.app/images/logo.jpg",
+      "telephone": "+380683929066",
+      "email": "phantombarbers.1@gmail.com",
+      "priceRange": "₴₴",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "проспект Незалежності, 8",
+        "addressLocality": "Долина",
+        "addressRegion": "Івано-Франківська область",
+        "postalCode": "77500",
+        "addressCountry": "UA"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 48.9728387, "longitude": 23.9652203 },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "09:00",
+        "closes": "20:00"
+      }],
+      "sameAs": [
+        "https://instagram.com/phantom_barbers",
+        "https://tiktok.com/@phantom.barbers"
+      ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Oswald:wght@500;700&family=Rye&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="images/logo.jpg">
+
+    <!-- Фавікон з вашого логотипу -->
+    <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+    <link rel="apple-touch-icon" href="images/logo.jpg">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="top">
-    <div id="preloader"><img src="images/logo.jpg" alt="Завантаження" class="preloader-logo"></div>
+    <div id="preloader" data-intro="scissors">
+        <div class="pre-curtain pre-left"></div>
+        <div class="pre-curtain pre-right"></div>
+        <div class="pre-strips"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="pre-hole"></div>
+        <div class="pre-cut"><i class="fas fa-cut"></i></div>
+        <div class="pre-center">
+            <div class="pre-logo-wrap">
+                <img src="images/logo.jpg" alt="Phantom Barbers" class="preloader-logo">
+            </div>
+            <p class="pre-text">Phantom Barbers</p>
+            <div class="pre-line"></div>
+        </div>
+    </div>
 
     <header>
         <a href="#top" class="logo-block">
             <img src="images/logo.jpg" alt="Логотип Phantom Barbers" class="header-logo">
             <span class="logo-text">Phantom Barbers</span>
         </a>
-        
+
         <button class="hamburger" aria-label="Відкрити меню навігації"><i class="fas fa-bars"></i></button>
 
         <nav class="nav-menu">
@@ -35,24 +103,24 @@
                 <li><a href="#lookbook">Look-Book</a></li>
                 <li><a href="#cosmetics">Косметика</a></li>
                 <li><a href="#contacts">Контакти</a></li>
-                
+
                 <li class="mobile-book-li">
                     <a href="https://w.wlaunch.net/i/999b5880-0034-11f1-920a-491fb198e776/b/999d2d5e-0034-11f1-920a-491fb198e776/r" target="_blank" class="mobile-book-btn" style="color: #ffffff !important; background-color: #000000 !important; border: 2px solid #ffffff !important; opacity: 1 !important; font-weight: 900 !important; letter-spacing: 1px !important;">ЗАПИС ОНЛАЙН</a>
                 </li>
-                
+
                 <li class="mobile-settings">
                     <div class="theme-switcher-block">
-                        <button onclick="toggleTheme('light')" class="theme-toggle-btn btn-light-theme active"><i class="fas fa-sun"></i></button>
-                        <button onclick="toggleTheme('dark')" class="theme-toggle-btn btn-dark-theme"><i class="fas fa-moon"></i></button>
+                        <button onclick="toggleTheme('light')" class="theme-toggle-btn btn-light-theme active" aria-label="Світла тема"><i class="fas fa-sun"></i></button>
+                        <button onclick="toggleTheme('dark')" class="theme-toggle-btn btn-dark-theme" aria-label="Темна тема"><i class="fas fa-moon"></i></button>
                     </div>
                     <div class="lang-switcher">
-                        <a href="index.html" class="lang active">УКР</a>
-                        <a href="en.html" class="lang">ENG</a>
+                        <a href="index.html" class="lang active" hreflang="uk">УКР</a>
+                        <a href="en.html" class="lang" hreflang="en">ENG</a>
                     </div>
                 </li>
             </ul>
         </nav>
-        
+
         <div class="header-actions">
             <a href="https://w.wlaunch.net/i/999b5880-0034-11f1-920a-491fb198e776/b/999d2d5e-0034-11f1-920a-491fb198e776/r" target="_blank" class="header-book-btn">ЗАПИС</a>
             <div class="settings-container">
@@ -65,8 +133,8 @@
                     </div>
                     <p class="dropdown-title">Мова</p>
                     <div class="lang-switcher">
-                        <a href="index.html" class="lang active">УКР</a>
-                        <a href="en.html" class="lang">ENG</a>
+                        <a href="index.html" class="lang active" hreflang="uk">УКР</a>
+                        <a href="en.html" class="lang" hreflang="en">ENG</a>
                     </div>
                 </div>
             </div>
@@ -78,7 +146,7 @@
             <h1>PHANTOM BARBERS</h1>
             <p class="subtitle">EST. 25 | LET'S MAKE THE DIFFERENCE</p>
             <p class="about-text">Тут чоловіки довіряють своє волосся справжнім майстрам.</p>
-            
+
             <p class="about-description" style="max-width: 600px; margin: 20px auto; color: #ccc;">
                 Шукаєте якісний барбершоп у Долині? У Phantom Barbers ми виконуємо не просто чоловічі стрижки, а створюємо стиль. Якщо вам потрібна професійна стрижка бороди, оформлення контурів чи консультація по чоловічій косметиці, наші барбери чекають на вас у центрі міста Долина.
             </p>
@@ -89,7 +157,7 @@
 
     <section id="services" class="full-width-section light-section" style="padding-bottom: 100px;">
         <h2 class="section-title title-center scroll-reveal">ПРАЙС-ЛИСТ НА СТРИЖКИ ТА ПОСЛУГИ В ДОЛИНІ</h2>
-        
+
         <div class="mobile-price-toggle scroll-reveal">
             <button class="price-btn active" id="btn-junior" onclick="togglePrice('junior')">МОЛОДШИЙ БАРБЕР</button>
             <button class="price-btn" id="btn-senior" onclick="togglePrice('senior')">СТАРШИЙ БАРБЕР</button>
@@ -98,8 +166,156 @@
         <div class="price-lists-wrapper">
             <div class="price-list-col slide-left" id="col-junior">
                 <h3 class="price-col-title">МОЛОДШИЙ БАРБЕР</h3>
-                <div class="price-row"><span class="col-service">1. Чоловіча стрижка</span><span class="col-price">250 грн</span></div>
-                <div class="price-row"><span class="col-service">2. Стрижка машинкою</span><span class="col-price">200 грн</span></div>
-                <div class="price-row"><span class="col-service">3. Дитяча стрижка (до 10 років)</span><span class="col-price">250 грн</span></div>
-                <div class="price-row"><span class="col-service">4. Стрижка під одну насадку</span><span class="col-price">200 грн</span></div>
-                <div class="price-row"><span class="col-service">5. Стрижка бороди</span><span class="col-price">250 грн</span></div>
+                <div class="price-row"><span class="col-service">1. Чоловіча стрижка</span><span class="col-price">350 грн</span></div>
+                <div class="price-row"><span class="col-service">2. Стрижка машинкою</span><span class="col-price">300 грн</span></div>
+                <div class="price-row"><span class="col-service">3. Дитяча стрижка (до 10 років)</span><span class="col-price">300 грн</span></div>
+                <div class="price-row"><span class="col-service">4. Стрижка бороди</span><span class="col-price">300 грн</span></div>
+                <div class="price-row"><span class="col-service">5. Королівське гоління</span><span class="col-price">300 грн</span></div>
+                <div class="price-row"><span class="col-service">6. Гоління шейвером</span><span class="col-price">200 грн</span></div>
+                <div class="price-row"><span class="col-service">7. Стрижка + борода</span><span class="col-price">650 грн</span></div>
+                <div class="price-row"><span class="col-service">8. Стрижка машинкою + борода</span><span class="col-price">600 грн</span></div>
+                <div class="price-row"><span class="col-service">9. VIP КЛІЄНТ</span><span class="col-price">700 грн</span></div>
+                <div class="price-row"><span class="col-service">10. Воскове видалення</span><span class="col-price">100 грн</span></div>
+            </div>
+
+            <div class="price-list-col slide-right hidden-mobile" id="col-senior">
+                <h3 class="price-col-title">СТАРШИЙ БАРБЕР</h3>
+                <div class="price-row"><span class="col-service">1. Чоловіча стрижка</span><span class="col-price">400 грн</span></div>
+                <div class="price-row"><span class="col-service">2. Стрижка машинкою</span><span class="col-price">350 грн</span></div>
+                <div class="price-row"><span class="col-service">3. Дитяча стрижка (до 10 років)</span><span class="col-price">350 грн</span></div>
+                <div class="price-row"><span class="col-service">4. Стрижка бороди</span><span class="col-price">350 грн</span></div>
+                <div class="price-row"><span class="col-service">5. Королівське гоління</span><span class="col-price">300 грн</span></div>
+                <div class="price-row"><span class="col-service">6. Гоління шейвером</span><span class="col-price">200 грн</span></div>
+                <div class="price-row"><span class="col-service">7. Стрижка + борода</span><span class="col-price">700 грн</span></div>
+                <div class="price-row"><span class="col-service">8. Стрижка машинкою + борода</span><span class="col-price">650 грн</span></div>
+                <div class="price-row"><span class="col-service">9. VIP КЛІЄНТ</span><span class="col-price">800 грн</span></div>
+                <div class="price-row"><span class="col-service">10. Воскове видалення</span><span class="col-price">100 грн</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="barbers" class="split-section reverse dark-section">
+        <div class="split-title"><h2 class="section-title title-right">БАРБЕРИ</h2></div>
+        <div class="split-content grid-2x2">
+            <article class="barber-box scroll-reveal">
+                <a href="https://instagram.com/barber_serhiy_if" target="_blank"><img src="images/barber1.jpg" alt="Сергій, старший барбер Phantom Barbers" class="b-img" loading="lazy"></a>
+                <h3>Сергій</h3><span class="b-rank">Старший барбер</span>
+                <a href="https://instagram.com/barber_serhiy_if" class="b-inst" target="_blank"><i class="fab fa-instagram"></i> @barber_serhiy_if</a>
+            </article>
+            <article class="barber-box scroll-reveal">
+                <a href="https://instagram.com/pavlo_barber.ph" target="_blank"><img src="images/barber2.jpg" alt="Павло, молодший барбер Phantom Barbers" class="b-img" loading="lazy"></a>
+                <h3>Павло</h3><span class="b-rank">Молодший барбер</span>
+                <a href="https://instagram.com/pavlo_barber.ph" class="b-inst" target="_blank"><i class="fab fa-instagram"></i> @pavlo_barber.ph</a>
+            </article>
+            <article class="barber-box scroll-reveal">
+                <a href="https://instagram.com/andrii_barber.ph" target="_blank"><img src="images/barber3.jpg" alt="Андрій, молодший барбер Phantom Barbers" class="b-img" loading="lazy"></a>
+                <h3>Андрій</h3><span class="b-rank">Молодший барбер</span>
+                <a href="https://instagram.com/andrii_barber.ph" class="b-inst" target="_blank"><i class="fab fa-instagram"></i> @andrii_barber.ph</a>
+            </article>
+        </div>
+    </section>
+
+    <section id="lookbook" class="full-width-section light-section">
+        <h2 class="section-title title-center scroll-reveal">НАШІ РОБОТИ (LOOK-BOOK)</h2>
+        <div class="lookbook-container scroll-reveal">
+            <button class="look-btn l-prev" aria-label="Попереднє фото" onclick="moveLookbook(-1)">❮</button>
+            <button class="look-btn l-next" aria-label="Наступне фото" onclick="moveLookbook(1)">❯</button>
+            <div class="lookbook-track" id="lookbook-track">
+                <img src="images/work1.jpg" data-index="0" alt="Чоловіча стрижка від барбера Phantom Barbers у Долині, фото 1" loading="lazy" onclick="openLightbox(this)">
+                <img src="images/work2.jpg" data-index="1" alt="Чоловіча стрижка від барбера Phantom Barbers у Долині, фото 2" loading="lazy" onclick="openLightbox(this)">
+                <img src="images/work3.jpg" data-index="2" alt="Чоловіча стрижка від барбера Phantom Barbers у Долині, фото 3" loading="lazy" onclick="openLightbox(this)">
+                <img src="images/work4.jpg" data-index="3" alt="Чоловіча стрижка від барбера Phantom Barbers у Долині, фото 4" loading="lazy" onclick="openLightbox(this)">
+                <img src="images/work5.jpg" data-index="4" alt="Чоловіча стрижка від барбера Phantom Barbers у Долині, фото 5" loading="lazy" onclick="openLightbox(this)">
+                <img src="images/work6.jpg" data-index="5" alt="Чоловіча стрижка від барбера Phantom Barbers у Долині, фото 6" loading="lazy" onclick="openLightbox(this)">
+                <img src="images/work7.jpg" data-index="6" alt="Чоловіча стрижка від барбера Phantom Barbers у Долині, фото 7" loading="lazy" onclick="openLightbox(this)">
+                <img src="images/work8.jpg" data-index="7" alt="Чоловіча стрижка від барбера Phantom Barbers у Долині, фото 8" loading="lazy" onclick="openLightbox(this)">
+            </div>
+        </div>
+        <div class="lookbook-dots scroll-reveal">
+            <button class="dot active" data-dot="0" aria-label="Фото 1" onclick="jumpToLookbook(0)"></button>
+            <button class="dot" data-dot="1" aria-label="Фото 2" onclick="jumpToLookbook(1)"></button>
+            <button class="dot" data-dot="2" aria-label="Фото 3" onclick="jumpToLookbook(2)"></button>
+            <button class="dot" data-dot="3" aria-label="Фото 4" onclick="jumpToLookbook(3)"></button>
+            <button class="dot" data-dot="4" aria-label="Фото 5" onclick="jumpToLookbook(4)"></button>
+            <button class="dot" data-dot="5" aria-label="Фото 6" onclick="jumpToLookbook(5)"></button>
+            <button class="dot" data-dot="6" aria-label="Фото 7" onclick="jumpToLookbook(6)"></button>
+            <button class="dot" data-dot="7" aria-label="Фото 8" onclick="jumpToLookbook(7)"></button>
+        </div>
+    </section>
+
+    <section id="cosmetics" class="split-section reverse dark-section">
+        <div class="split-title"><h2 class="section-title title-right">ПРОФЕСІЙНА КОСМЕТИКА</h2></div>
+        <div class="split-content">
+            <div class="cosmetics-slider-container scroll-reveal">
+                <div class="cosmetics-track" id="cosmetics-grid"></div>
+                <div class="pagination" id="cosmetics-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="contacts" class="light-section" style="padding-top: 50px; padding-bottom: 50px;">
+        <h2 class="section-title title-center scroll-reveal">КОНТАКТИ</h2>
+        <div class="contacts-wrapper scroll-reveal">
+            <div class="c-info">
+                <p class="c-item"><i class="fas fa-map-marked-alt"></i> м. Долина, проспект Незалежності, 8, 77500</p>
+                <p class="c-item"><i class="fas fa-clock"></i> Пн - Сб: 09:00 - 20:00</p>
+                <p class="c-item"><a href="tel:+380683929066"><i class="fas fa-phone-alt"></i> 068 39 29 066</a></p>
+                <p class="c-item"><a href="mailto:phantombarbers.1@gmail.com"><i class="fas fa-envelope"></i> phantombarbers.1@gmail.com</a></p>
+                <div class="c-socials">
+                    <a href="https://instagram.com/phantom_barbers" target="_blank"><i class="fab fa-instagram"></i> @phantom_barbers</a>
+                    <a href="https://tiktok.com/@phantom.barbers" target="_blank"><i class="fab fa-tiktok"></i> @phantom.barbers</a>
+                </div>
+            </div>
+
+            <div class="c-map">
+               <iframe title="Карта: Phantom Barbers, проспект Незалежності, 8, Долина" 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2613.881267868351!2d23.962645376899723!3d48.97283869996726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x439b1cfe65fd6679%3A0x19ac7fc8b8e182ab!2sPhantom%20barbershop!5e0!3m2!1suk!2sua!4v1700000000000!5m2!1suk!2sua" 
+    width="100%" height="450" style="border:0; width:100%; min-height: 450px; border-radius: 15px;" 
+    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+                <div class="review-block">
+                    <p class="review-text">Сподобалось? Залиш відгук!</p>
+                    <!-- Пряме посилання на форму відгуку задається в script.js (REVIEW_LINK / REVIEW_PLACE_ID) -->
+                    <a href="https://www.google.com/maps/place/Phantom+barbershop/@48.9730007,23.9652182,19.5z/data=!4m6!3m5!1s0x439b1cfe65fd6679:0x19ac7fc8b8e182ab!8m2!3d48.9728387!4d23.9652203!16s%2Fg%2F11zxngdlsh" target="_blank" rel="noopener" class="review-btn">
+                        <i class="fas fa-star"></i> ЗАЛИШИТИ ВІДГУК
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://w.wlaunch.net/i/999b5880-0034-11f1-920a-491fb198e776/b/999d2d5e-0034-11f1-920a-491fb198e776/r" target="_blank" class="float-book-btn pulse-btn" aria-label="Записатись онлайн">
+        <i class="fas fa-cut"></i><span>ЗАПИС</span>
+    </a>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-socials">
+                    <a href="https://instagram.com/phantom_barbers" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com/@phantom.barbers" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="mailto:phantombarbers.1@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-center">
+                <div class="footer-text-nav">
+                    <a href="#services">Послуги</a>
+                    <a href="#barbers">Барбери</a>
+                    <a href="#lookbook">Look-Book</a>
+                    <a href="#cosmetics">Косметика</a>
+                    <a href="#contacts">Контакти</a>
+                </div>
+                <p>© 2026 Phantom Barbers. Всі права захищено.</p>
+            </div>
+            <div class="footer-right">
+                <a href="#top" class="btn-to-top" aria-label="На початок">На початок <i class="fas fa-chevron-up bounce-icon"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()"><button class="close-lightbox" aria-label="Закрити фото">×</button><img class="lightbox-content" id="lightbox-img" alt="Збільшене фото"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
